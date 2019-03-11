@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+    <title>DabbaWala</title>
+  </head>
+
+  <body>
+    <header>
+            <nav>
+                <div class="row">
+                    <img src="resources/img/logo.jpg" alt="Omnifood logo" class="logo">
+                    <img src="resources/img/logo.jpg" alt="Omnifood logo" class="logo-black">
+                    <ul class="main-nav js--main-nav">
+                        <li><a href="#features">Tiffin delivery</a></li>
+                        <li><a href="#works">How it works</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">About us</a></li>
+                    </ul>
+                    <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
+                </div>
+            </nav>
+            <div class="hero-text-box">
+                <h1>Goodbye junk food.<br>Hello super healthy Tiffins.</h1>
+                <button onclick="document.getElementById('id03').style.display='block'" class="btn btn-full">Register as a vendor</button>
+                <button onclick="document.getElementById('id02').style.display='block'" class="btn btn-ghost">Order Now</button>
+            </div>
+            <div id="id02" class="modal">
+              <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <form class="modal-content animate" action="mail.php" method="post">
+                <div class="container">
+                  <h2>Ordering Details</h2>
+                  <p>Please fill the form to place your order(We deliver food only inside Tezpur University campus).</p>
+                  <hr>
+
+            	  <label for="fname"><b>Your Name</b></label>
+                  <input type="text" placeholder="Enter Your Name" name="fname" required>
+
+            	  <label><b>Order</b></label></br></br>
+                <table>
+                	  <tr>
+                		<th><input type="hidden" name="1name" size="30" value="Vegthali Rice"/>Vegthali Rice</th>
+                		<th ><input type="text" placeholder="Enter The Quantity" name="2name" value = "0"></th>
+                		<th><input type="hidden" name="5name" size="30" value="Vegthali Roti"/>Vegthali Roti</th>
+                		<th ><input type="text" placeholder="Enter The Quantity" name="6name" value = "0"></th>
+                		</tr>
+                		<tr>
+                		<th><input type="hidden" name="3name" size="30" value="Non Vegthali Rice"/>Non Vegthali Rice</th>
+                		<th ><input type="text" placeholder="Enter The Quantity" name="4name" value = "0"></th>
+                		<th><input type="hidden" name="7name" size="30" value="Non Vegthali Roti"/>Non Vegthali Roti</th>
+                		<th ><input type="text" placeholder="Enter The Quantity" name="8name" value = "0"></th>
+                		</tr>
+                	</table>
+
+            	  </br>
+                  <label for="username"><b>Contact Number</b></label>
+                  <input type="text" placeholder="Enter Your Contact Number" name="Username" required>
+
+                  <label for="psw"><b>Delivery Address</b></label>
+                  <input type="text" placeholder="Enter Your Delivery Address" name="psw" required>
+
+            	  <label for="psw1"><b>Email Address</b></label>
+                  <input type="text" placeholder="Enter Your Email Address" name="psw1" required></br>
+
+            	  <input type="checkbox" name="terms" size="30" required>By ordering you agree to the <a href="Terms and conditions.pdf">Terms and Conditions</a></br>
+
+            	  <p>The bill will be provided at the time of delivery and delivery charge of Rs 20 will be taken</p>
+
+                  <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn form-btn">Cancel</button>
+                    <button type="submit" class="signupbtn form-btn" value="submit" name="submit">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div id="id03" class="modal">
+  <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content animate" action="data.php" method="post">
+    <div class="container">
+      <h2>Vendor Registration Form</h2>
+      <p>Please fill the form correctly to register as a vendor(You have to be a resident of Tezpur University Campus).</p>
+      <hr>
+
+	  <label for="fname"><b>Your Name</b></label>
+      <input type="text" placeholder="Enter Your Name" name="fname" required>
+
+	  <label for="lname"><b>Any Experience</b></label>
+	  <select name="lname" >
+      <option value="YES">YES</option>
+      <option value="NO" selected>NO</option>
+      </select></br></br></br>
+
+      <label for="psw"><b>Present Address</b></label>
+      <input type="text" placeholder="Enter Your Present Address" name="psw" required>
+
+	  <label for="Username"><b>Contact Number</b></label>
+      <input type="text" placeholder="Enter Your Contact Number" name="Username" required>
+
+	  <label for="psw1"><b>Email Address</b></label>
+      <input type="text" placeholder="Enter Your Email Address" name="psw1" required></br>
+
+	  <input type="checkbox" name="terms" size="30" required>By Submitting the form you agree to the <a href="policies.pdf">Policies</a></br>
+
+	  <p>After submitting the form please check your email to confirm successful registration and also we will contact you soon for further processes.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn form-btn">Cancel</button>
+        <button type="submit" class="signupbtn form-btn"  value="submit" name="submit">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+      </header>
+      <section class="section-features js--section-features" id="features">
+            <div class="row">
+                <h2>Get food fast &mdash; not fast food</h2>
+                <p class="long-copy">
+                    Hello, we're the Dabbawalas, your new tiffin delivery service. We know you're always busy. No time for cooking. So let us take care of that, we're really good at it, we promise!
+                </p>
+            </div>
+
+            <div class="row js--wp-1">
+                <div class="col span-1-of-4 box">
+                    <i class="ion-ios-infinite-outline icon-big"></i>
+                    <h3>Up to 365 days/year</h3>
+                    <p>
+                        Never cook again! We really mean that. We will provide you tiffin for 365 days/year from 11:30-3:30 p.m.
+                    </p>
+                </div>
+                <div class="col span-1-of-4 box">
+                    <i class="ion-ios-stopwatch-outline icon-big"></i>
+                    <h3>Ready in 60 minutes</h3>
+                    <p>
+                        You're only sixty minutes away from your delicious and super healthy meals delivered right to your home or office.
+                    </p>
+                </div>
+                <div class="col span-1-of-4 box">
+                    <i class="ion-ios-nutrition-outline icon-big"></i>
+                    <h3>100% Healthy</h3>
+                    <p>
+                        Healthy food to remind you of your home.
+                    </p>
+                </div>
+                <div class="col span-1-of-4 box">
+                    <i class="ion-ios-person-outline icon-big"></i>
+                    <h3>Become a Vendor</h3>
+                    <p>
+                        Enroll as a vendor, earn extra income and help us to deliver best quality tiffins
+                    </p>
+                </div>
+            </div>
+        </section>
+		<center>
+		
+                 <div id="new"></br> </br> </br>  
+                    <h1 id=z1>Want to become a part of the Dabba Wala family?</h1></br>
+					<h1 id=z1>Want an extra income?</h1></br>
+					<h1 id=z1>Want to show off your cooking skills?</h1></br> </br> 
+					
+			<div>
+                <button onclick="document.getElementById('id03').style.display='block'" class="btn btn-full">Register as a vendor</button>
+            </div>
+	<div id="id03" class="modal">
+  <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content animate" action="data.php" method="post">
+    <div class="container">
+      <h2>Vendor Registration Form</h2>
+      <p>Please fill the form correctly to register as a vendor(You have to be a resident of Tezpur University Campus).</p>
+      <hr>
+
+	  <label for="fname"><b>Your Name</b></label>
+      <input type="text" placeholder="Enter Your Name" name="fname" required>
+
+	  <label for="lname"><b>Any Experience</b></label>
+	  <select name="lname" >
+      <option value="YES">YES</option>
+      <option value="NO" selected>NO</option>
+      </select></br></br></br>
+
+      <label for="psw"><b>Present Address</b></label>
+      <input type="text" placeholder="Enter Your Present Address" name="psw" required>
+
+	  <label for="Username"><b>Contact Number</b></label>
+      <input type="text" placeholder="Enter Your Contact Number" name="Username" required>
+
+	  <label for="psw1"><b>Email Address</b></label>
+      <input type="text" placeholder="Enter Your Email Address" name="psw1" required></br>
+
+	  <input type="checkbox" name="terms" size="30" required>By Submitting the form you agree to the <a href="policies.pdf">Policies</a></br>
+
+	  <p>After submitting the form please check your email to confirm successful registration and also we will contact you soon for further processes.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn form-btn">Cancel</button>
+        <button type="submit" class="signupbtn form-btn"  value="submit" name="submit">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+					
+                    
+                </div>
+		
+		</center>
+		
+		
+		
+        <section class="section-steps" id="works">
+            <div class="row">
+                <h2>How it works &mdash; Simple as 1, 2, 3</h2>
+            </div>
+            <div class="row">
+                <div class="steps-box">
+                  <div class="works-step clearfix">
+                      <div>1</div>
+                      <p>You can directly order your tiffin by clicking on the order now button (from 12:00-3:00p.m.)after viewing the menu or you can also register as a vendor</p>
+                  </div>
+                  <div class="works-step clearfix">
+                      <div>2</div>
+                      <p>Upon ordering you will get a mail about the order details.</p>
+                  </div>
+                  <div class="works-step clearfix">
+                      <div>3</div>
+                      <p>Enjoy your meal after less than 60 minutes. See you the next time!Our men will take the tiffin from you after 3:30p.m. from your office or home or you can drop it in our deposit kiosks.</p>
+                  </div>
+                </div>
+            </div>
+        </section>
+        <section id="menu">
+          <div class="row">
+            <h2>Menu</h2>
+          </div>
+          <div class="row">
+            <img src="resources/img/DabbaWala.jpg" alt="Menu" class="menu">
+          </div>
+        </section>
+        <section class="section-meals">
+            <ul class="meals-showcase clearfix">
+                <li>
+                    <figure class="meal-photo">
+                        <img src="resources/img/2.jpg" alt="A tiffin">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="resources/img/belan.jpeg" alt="A traditional way of making roti">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="resources/img/parathathali.jpeg" alt="Paratha Thali">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="resources/img/roti.jpeg" alt="Roti served in restaurants">
+                    </figure>
+                </li>
+            </ul>
+            <ul class="meals-showcase clearfix">
+                <li>
+                    <figure class="meal-photo">
+                        <img src="resources/img/sabji.jpeg" alt="Potato fry vegetable">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="resources/img/stove.jpeg" alt="A stove in a dhaaba">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="resources/img/thali.jpeg" alt="A veg thali">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="resources/img/tiffin.jpeg" alt="A tiffin usually delivered by dabbawala">
+                    </figure>
+                </li>
+            </ul>
+        </section>
+        <section  class="section-about" id="about">
+          <div class="row">
+            <h2>About Us</h2>
+          </div>
+          <div class="row">
+            <div class="col span-1-of-3 box">
+              <div class="plan-box">
+                <p class="about" title="Prateek Saikia&#13;B.Tech 4th Sem,CSE Department&#13;Tezpur University , Assam&#13;prateek98saikia@gmail.com&#13;+91 9654535144"><img src="resources/img/prateek.jpg"></p>
+                <p class="name" title="Prateek Saikia&#13;B.Tech 4th Sem,CSE Department&#13;Tezpur University , Assam&#13;prateek98saikia@gmail.com&#13;+91 9654535144">Prateek Saikia<br><span class="des">Marketing Head</span><br>
+				<ul class="social-links">
+                        <li><a href="https://www.facebook.com/prateek.saikia" title="Facebook"><i class="ion-social-facebook"></i></a></li>
+                        <li><a href="https://plus.google.com/u/0/111623932849223541406" title="Google Plus"><i class="ion-social-googleplus"></i></a></li>
+                        <li><a href="https://www.instagram.com/prateek.7.saikia/" title="Instagram"><i class="ion-social-instagram"></i></a></li>
+                    </ul></p>
+              </div>
+            </div>
+            <div class="col span-1-of-3 box">
+              <div class="plan-box">
+                <p class="about" title="Nandita Kalita&#13;B.Tech 4th Sem,CSE Department&#13;Tezpur University , Assam&#13;nandita.kalita1@gmail.com&#13;+91 7002045894"><img src="resources/img/nandita.jpg"></p>
+                <p class="name" title="Nandita Kalita&#13;B.Tech 4th Sem,CSE Department&#13;Tezpur University , Assam&#13;nandita.kalita1@gmail.com&#13;+91 7002045894">Nandita Kalita<br><span class="des">Front-end Developer</span><br>
+				<ul class="social-links">
+                        <li><a href="https://www.facebook.com/nandita.kalita2" title="Facebook"><i class="ion-social-facebook"></i></a></li>
+                        <li><a href="https://plus.google.com/u/1/114015959276215496227" title="Google Plus"><i class="ion-social-googleplus"></i></a></li>
+                        <li><a href="https://www.instagram.com/nandita_kalita/" title="Instagram"><i class="ion-social-instagram"></i></a></li>
+                    </ul></p>
+              </div>
+            </div>
+            <div class="col span-1-of-3 box">
+              <div class="plan-box">
+                <p class="about" title="Mohan Kumar Sah&#13;B.Tech 4th Sem,CSE Department&#13;Tezpur University , Assam&#13;radhemohan1001001@gmail.com&#13;+91 9678574031"><img src="resources/img/customer-3.jpg"></p>
+                <p class="name" title="Mohan Kumar Sah&#13;B.Tech 4th Sem,CSE Department&#13;Tezpur University , Assam&#13;radhemohan1001001@gmail.com&#13;+91 9678574031">Mohan Kumar Sah<br><span class="des">Back-end Developer</span><br>
+				<ul class="social-links">
+                        <li><a href="https://www.facebook.com/aayesha.mohan" title="Facebook"><i class="ion-social-facebook"></i></a></li>
+                        <li><a href="https://plus.google.com/u/0/101573436464381217753" title="Google Plus"><i class="ion-social-googleplus"></i></a></li>
+                        <li><a href="https://www.instagram.com/mohan.kumar.sah/" title="Instagram"><i class="ion-social-instagram"></i></a></li>
+                    </ul>
+				</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-form">
+            <div class="row">
+                <h2>We're happy to hear from you</h2>
+            </div>
+            <div class="row">
+                <form class="contact-form" action="comment.php" method="post">
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="name" id="name" placeholder="Your name" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="email" name="email" id="email" placeholder="Your email" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="find-us">How did you find us?</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <select name="find-us" id="find-us">
+                                <option value="friends" selected>Friends</option>
+                                <option value="search">Search engine</option>
+                                <option value="ad">Advertisement</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>Drop us a line</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <textarea name="message" placeholder="Your message"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+						<button type="submit" value="submit" name="submit" class="btn btn-full">Send it!</button>
+                        </div>
+                    </div>
+
+                </form>
+              </div>
+        </section>
+
+        <footer>
+            <!--<div class="row">
+                <div class="col span-1-of-2">
+                    <ul class="footer-nav">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">iOS App</a></li>
+                        <li><a href="#">Android App</a></li>
+                    </ul>
+                </div>
+                <div class="col span-1-of-2">
+                    <ul class="social-links">
+                        <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                        <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                        <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                        <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>-->
+            <div class="row">
+			<p>Contact Us At</br>dabba.wala18@gmail.com</br>+91 9678574031  |  +91 9654535144 	| 	+91 7002045894</p>
+                <p>
+                  Made with <i class="ion-ios-heart" style="color: #ea0000; padding: 0 3px;"></i> in Tezpur University
+                </p>
+            </div>
+        </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+       <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+       <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+       <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+       <script src="vendors/js/jquery.waypoints.min.js"></script>
+       <script src="resources/js/script.js"></script>
+       <script>
+       // Get the modal
+       var modal = document.getElementById('id02');
+
+       // When the user clicks anywhere outside of the modal, close it
+       window.onclick = function(event) {
+           if (event.target == modal) {
+               modal.style.display = "none";
+           }
+       }
+       </script>
+  </body>
+</html>
